@@ -4,6 +4,14 @@ Create and export custom memes with text overlay using React!
 
 👉 [Live Demo](https://meme-gen-brown.vercel.app/)
 
+
+
+![memeGen](https://github.com/user-attachments/assets/c775d10d-6969-4799-81be-08d1d54a3dcf)
+
+
+
+
+
 ## Features
 
 - Custom text overlay on meme images
