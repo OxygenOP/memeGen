@@ -33,7 +33,7 @@ const MemeGenerator = () => {
       </div>
 
       {/* Controls */}
-      <div className="mt-6 space-y-4 w-[500px]">
+      <div className="mt-6 space-y-4 w-full">
         <input
           type="text"
           value={topText}
