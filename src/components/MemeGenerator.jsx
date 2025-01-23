@@ -6,6 +6,7 @@ const MemeGenerator = () => {
   const memeRef = useRef();
   const [topText, setTopText] = useState("Wow");
   const [bottomText, setBottomText] = useState("Such React");
+  const [scale, setScale] = useState(1);
 
   return (
     <div className="h-full w-full bg-gray-100 flex flex-col items-center justify-center p-2">
@@ -33,7 +34,7 @@ const MemeGenerator = () => {
       </div>
 
       {/* Controls */}
-      <div className="mt-6 space-y-4 w-full">
+      <div className="mt-6 space-y-4 w-full max-w-[500px]">
         <input
           type="text"
           value={topText}
@@ -48,11 +49,17 @@ const MemeGenerator = () => {
           placeholder="Bottom text"
           className="w-full px-4 py-2 rounded border border-gray-300"
         />
+        <input
+          type="number"
+          value={scale}
+          onChange={(e) => setScale(e.target.value)}
+          className="w-full px-4 py-2 rounded border border-gray-300"
+        />
         <button
           onClick={() =>
             exportComponentAsPNG(memeRef, {
               fileName: "custom-meme.png",
-              html2CanvasOptions: { scale: 1 },
+              html2CanvasOptions: { scale: scale },
             })
           }
           className="w-full px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
